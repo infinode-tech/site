@@ -8,6 +8,7 @@ import NavBar from "@/components/NavBar";
 import Service from "@/components/Service";
 import Testimonials from "@/components/Testimonials";
 import { SparklesCore } from "@/components/ui/sparkles";
+import Head from "next/head";
 import { useEffect } from "react";
 
 export default function Main() {
@@ -22,6 +23,10 @@ export default function Main() {
 
   return (
     <main className="flex flex-col items-center bg-black text-white relative">
+      <Head>
+        <title>Ininode</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       {/* <div className="w-full absolute inset-0 h-auto">
         <SparklesCore
           id="tsparticlesfullpage"
