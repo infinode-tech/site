@@ -27,7 +27,7 @@ function Contact() {
           >
             Have an idea?
             <br></br>
-            Let's make it a reality.
+            Let&apos;s make it a reality.
             <br></br>
             <a href="mailto:hello@infinode.tech">
               <Highlight className="md:text-6xl text-white cursor-pointer">

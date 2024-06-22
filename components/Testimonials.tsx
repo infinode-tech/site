@@ -6,10 +6,12 @@ function Testimonials() {
     <div className="h-screen w-screen rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden space-y-6">
       <div className="absolute pointer-events-none inset-0 hidden md:flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="text-center flex flex-col space-y-4">
-        <h1 className="md:text-6xl text-3xl font-bold">Don't believe us?</h1>
+        <h1 className="md:text-6xl text-3xl font-bold">
+          Don&apos;t believe us?
+        </h1>
         <p>
           Hear from these amazing people!<br></br>{" "}
-          <span className="text-xs">(We promise we didn't pay them)</span>
+          <span className="text-xs">(We promise we didn&apos;t pay them)</span>
         </p>
       </div>
       <InfiniteMovingCards speed="slow" items={testimonials} />
