@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <div className="w-screen h-screen flex items-center justify-center text-white  lg:px-20 md:px-10 px-5 overflow-hidden">
+    <div
+      id="contact"
+      className="w-screen h-screen flex items-center justify-center text-white  lg:px-20 md:px-10 px-5 overflow-hidden"
+    >
       <div className="text-center flex flex-col space-y-4">
         <HeroHighlight>
           <motion.h1

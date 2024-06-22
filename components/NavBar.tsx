@@ -16,9 +16,12 @@ const NavBar = () => {
       </ul> */}
 
       <div className="flex space-x-2 items-center">
-        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-white bg-[linear-gradient(110deg,#1A1A1A,45%,#1e2631,55%,#1A1A1A)] bg-[length:200%_100%] px-6 font-medium text-whit3e transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        <a
+          href="#contact"
+          className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-white bg-[linear-gradient(110deg,#1A1A1A,45%,#1e2631,55%,#1A1A1A)] bg-[length:200%_100%] px-6 font-medium text-whit3e transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+        >
           Contact Us
-        </button>
+        </a>
         {/* <div className="flex relative md:hidden">
           <button
             onClick={() => setOpen(!open)}
