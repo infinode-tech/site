@@ -27,7 +27,7 @@ const config: Config = {
     extend: {
       colors: {
         'cosmic-blue': '#0B3D91',
-        'purple': '#6A0DAD',
+        'purple': '#232D3F',
         'black': '#1A1A1A',
         'white': '#ECF0F1',
   

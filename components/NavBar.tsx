@@ -7,7 +7,13 @@ const NavBar = () => {
 
   return (
     <div className="py-6 w-full px-4 flex justify-between items-center fixed z-50">
-      <Image src="/assets/logoW.svg" alt="logo" width={50} height={50} />
+      <Image
+        src="/assets/logo.svg"
+        color="white"
+        alt="logo"
+        width={50}
+        height={50}
+      />
       {/* <ul className="space-x-10 justify-center font-bold md:flex hidden">
         <li>Home</li>
         <li>Our Team</li>
@@ -69,3 +75,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+ 

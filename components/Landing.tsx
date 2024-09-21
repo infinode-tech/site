@@ -33,13 +33,16 @@ function Landing() {
           <br /> with
         </div>
         <div className="mt-4 space-y-4">
-          <Image
+          {/* <Image
             src="/assets/logoFW.svg"
             alt="hero"
             width={800}
             height={800}
             className="mx-auto"
-          />
+          /> */}
+          <span className="text-5xl md:text-6xl lg:text-8xl font-bold">
+            INFINODE
+          </span>
         </div>
         <span className=" pt-4">Infinite Possibilities</span>
       </div>
