@@ -24,7 +24,7 @@ const testimonials = [
     quote:
       "After working with Infinode, I can't imagine working with anyone else. They are the best in the business.",
     name: "Saimaan Ibrahim",
-    title: "President",
+    title: "President of SKY",
   },
   {
     quote:
