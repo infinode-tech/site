@@ -1,9 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { FlipWords } from "./ui/flip-words";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
-const phrases = ["Build", "with", "INFINODE", "Infinite Possibilities"];
+const phrases = ["Build", "with", "INFINODE"];
 const words = ["Magic", "Solutions", "Websites", "Brands", "Ideas", "Dreams"];
 function Landing() {
   return (
@@ -48,7 +48,7 @@ function Landing() {
     //     <span className=" pt-4">Infinite Possibilities</span>
     //   </div>
     // </div>
-    <div className="w-screen h-screen flex justify-center items-center gap-[20vw] flex-col text-[5vw]">
+    <div className="w-screen h-screen flex justify-center items-start gap-[20vw] flex-col text-[5vw]">
       <MaskText />
     </div>
   );
@@ -94,6 +94,19 @@ function MaskText() {
             </div>
           );
         })}
+        <motion.div
+          initial={{ opacity: 0, x: "-10%" }}
+          whileInView={{ opacity: 1, x: "0" }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.75,
+            ease: [0.33, 1, 0.68, 1],
+            delay: 0.75,
+          }}
+          className="text-[5vw] opacity-60 font-bold"
+        >
+          Infinite Possibilities
+        </motion.div>
       </div>
     </AnimatePresence>
   );

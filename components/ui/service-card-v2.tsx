@@ -15,12 +15,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     // <div className="grid group relative h-[450px] w-[450px] overflow-hidden">
     <motion.div
-      whileInView={{
-        scale: [0, 1],
-        opacity: [0, 1],
-        transition: { duration: 0.5 },
-      }}
-      viewport={{ once: true }}
+      // initial={{ scale: 0, opacity: 0 }}
+      // whileInView={{
+      //   scale: [0, 1],
+      //   opacity: [0, 1],
+      //   transition: { duration: 0.2 },
+      // }}
+      // viewport={{ once: true }}
       className="relative h-[250px] w-[450px] max-w-[80vw] overflow-hidden bg-gray-200 rounded-lg"
     >
       {/* <span className="icon">{icon}</span>
