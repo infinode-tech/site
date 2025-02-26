@@ -72,21 +72,22 @@ export const Highlight = ({
       initial={{
         backgroundSize: "0% 100%",
       }}
-      animate={{
+      whileInView={{
         backgroundSize: "100% 100%",
       }}
       transition={{
-        duration: 2,
+        duration: 1,
         ease: "linear",
         delay: 0.5,
       }}
+      viewport={{ once: true }}
       style={{
         backgroundRepeat: "no-repeat",
         backgroundPosition: "left center",
         display: "inline",
       }}
       className={cn(
-        `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-indigo-500 to-purple`,
+        `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-[#af40ff] to-[#00ddeb]`,
         className
       )}
     >
