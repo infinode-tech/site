@@ -13,7 +13,7 @@ const Paragraph = ({ paragraph }: { paragraph: string }) => {
   return (
     <p
       ref={container}
-      className="text-4xl md:text-7xl font-bold mb-14 relative text-white p-4 max-w-screen-lg mx-auto"
+      className="text-4xl md:text-7xl font-bold mb-14 relative text-white p-5 max-w-screen-lg mx-auto"
     >
       {words.map((word, i) => {
         const start = i / words.length;
