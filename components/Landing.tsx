@@ -71,7 +71,7 @@ function MaskText() {
   };
   return (
     <AnimatePresence>
-      <div ref={body} className="text-[5vw]">
+      <div ref={body} className="text-[10vw] p-10">
         {phrases.map((phrase, index) => {
           return (
             <div key={index} className="m-o font-[700] overflow-hidden">
