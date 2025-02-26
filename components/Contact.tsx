@@ -6,7 +6,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="relative bg-white h-[90vh] w-screen flex items-center justify-center lg:px-20 md:px-10 px-5 overflow-hidden text-[#202d3f]"
+      className="relative bg-white h-[calc(100dvh-92.09px)] w-screen flex items-center justify-center lg:px-20 md:px-10 px-5 overflow-hidden text-[#202d3f]"
       style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
     >
       {/* <div className="fixed h-[800px] w-screen bottom-0 text-center flex flex-col space-y-4 ">
