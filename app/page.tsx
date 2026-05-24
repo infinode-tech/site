@@ -1,70 +1,42 @@
 "use client";
 
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import HorizontalScroll from "@/components/HorizontalScroll";
-import Landing from "@/components/Landing";
+import { useEffect, useState } from "react";
+import { NavBar } from "@/components/sections/NavBar";
+import { Splash } from "@/components/sections/Splash";
+import { Hero } from "@/components/sections/Hero";
+import { Manifesto } from "@/components/sections/Manifesto";
+import { ScrollScene } from "@/components/sections/ScrollScene";
+import { Services } from "@/components/sections/Services";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/sections/Footer";
 
-import NavBar from "@/components/NavBar";
-import SplashScreen from "@/components/Splash/SplashScreen";
-import Team from "@/components/Team";
-// import Service from "@/components/Service";
-import Testimonials from "@/components/Testimonials";
-import { motion } from "framer-motion";
-// import { SparklesCore } from "@/components/ui/sparkles";
-// import Head from "next/head";
-import "normalize.css";
-import { useEffect, useRef, useState } from "react";
+export default function Page() {
+  const [showSplash, setShowSplash] = useState(true);
 
-export default function Main() {
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+    if (showSplash) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [showSplash]);
 
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
-  const [isSplashVisible, setIsSplashVisible] = useState(true);
-  const handleAnimationComplete = () => {
-    setIsSplashVisible(false);
-  };
   return (
-    <main className="bg-[#202d3f] text-white relative w-screen">
-      {/* <div className="w-full absolute inset-0 h-auto">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full z-0"
-          particleColor="#FFFFFF"
-        />
-      </div> */}
-      {isSplashVisible && (
-        <SplashScreen onAnimationComplete={handleAnimationComplete} />
-      )}
-      {!isSplashVisible && (
-        <>
-          <NavBar />
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          > */}
-          {/* Your main app content goes here */}
+    <main className="relative bg-ink-1 text-mist-1 w-screen min-h-screen">
+      {showSplash && <Splash onComplete={() => setShowSplash(false)} />}
 
-          <Landing />
-          <About />
-          <HorizontalScroll />
-          <Testimonials />
-          {/* <Team /> */}
-          <Contact />
-          {/* </motion.div> */}
-        </>
-      )}
-      {/* <Service /> */}
+      <NavBar />
+      <Hero />
+      <Manifesto />
+      <ScrollScene />
+      <Services />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </main>
   );
 }
